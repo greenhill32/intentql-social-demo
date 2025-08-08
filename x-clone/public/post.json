@@ -1,0 +1,5 @@
+{
+  "text": "Hello world from IntentQL — this post was read from post.json and rendered live.",
+  "media_url": "",
+  "timestamp": "${BUILD_TIMESTAMP}"
+}

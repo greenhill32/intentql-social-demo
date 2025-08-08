@@ -1,0 +1,33 @@
+{
+  "$schema": "https://intentql.dev/schemas/agent-0.1.json",
+  "name": "IntentQL Social — X-style",
+  "description": "Demo site that accepts agent-native posts. Agents commit to post.json in this repo.",
+  "intents": [
+    {
+      "name": "publish_post",
+      "title": "Publish Post",
+      "input": {
+        "type": "object",
+        "required": ["text"],
+        "properties": {
+          "text": { "type": "string", "maxLength": 560 },
+          "media_url": { "type": "string", "format": "uri", "nullable": true },
+          "timestamp": { "type": "string", "format": "date-time", "nullable": true }
+        }
+      },
+      "actions": [
+        {
+          "type": "github.commit",
+          "repo": "YOUR_GH_USERNAME/YOUR_REPO_NAME",
+          "path": "public/post.json",
+          "message": "chore: publish_post via agent",
+          "encoding": "json"
+        }
+      ]
+    }
+  ],
+  "status": {
+    "type": "json",
+    "href": "/public/post.json"
+  }
+}
