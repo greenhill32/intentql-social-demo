@@ -1,5 +1,5 @@
 {
-  "text": "Hello world from IntentQL — this post was read from post.json and rendered live.",
+  "text": "Hello from IntentQL — first X‑style post!",
   "media_url": "",
-  "timestamp": "${BUILD_TIMESTAMP}"
+  "timestamp": "2025-08-08T00:00:00Z"
 }
